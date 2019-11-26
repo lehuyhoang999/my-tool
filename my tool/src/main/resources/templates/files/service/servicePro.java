@@ -23,7 +23,7 @@ public class [( ${serviceId} )]Service extends BaseService implements [( ${servi
 	
 	private static final int IN_PARAM_START_IDX = 1;
 	private static final int OUT_PARAM_START_IDX_PROC1 = [(${outParamIndex})];
-	private static final int PROC1_NAME = [(${procedureName})];
+	private static final String PROC1_NAME = [(${procedureName})];
 	
 	@PersistenceContext
 	private EntityManager entityManager;

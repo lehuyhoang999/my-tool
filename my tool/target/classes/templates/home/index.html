@@ -1,0 +1,60 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link th:href="@{/css/convert.css}" rel="stylesheet">
+</head>
+	<body>
+		<form>
+	        <label for="serviceId"
+	               th:text="#{conversion.serviceId}">Service ID</label>
+	        <div>
+	          <input type="text"
+	                 id="serviceId"
+	                 maxlength="15"
+	                 value="Service001">
+	        </div>
+	
+	        <label for="author"
+	               th:text="#{conversion.author}">Author</label>
+	        <div>
+	          <input type="text"
+	                 id="author"
+	                 maxlength="20"
+	                 value="hoangcode">
+	        </div>
+		 	<label for="procedureName"
+	               th:text="#{conversion.procedureName}">Procedure Name</label>
+	        <div>
+	          <input type="text"
+	                 id="procedureName"            
+	                 maxlength="50"
+	                 value="PROC_NAME">
+	        </div>
+			<div>
+				<textarea
+                   id="outParam"
+                   class="out"
+                   th:placeholder="#{conversion.outParam}"
+                   th:title="#{conversion.outParam}"></textarea>
+			</div>
+			<div>
+				<textarea
+                   id="inParam"
+                   class="in"
+                   th:placeholder="#{conversion.inParam}"
+                   th:title="#{conversion.inParam}"></textarea>
+			</div>
+			<div>
+			    <button type="button" class="btn-conversion" th:text="#{common.convert}">
+			      Save
+			    </button>
+			 </div>
+		</form>
+		<script th:src="@{/js/jquery/jquery.min.js}"></script>
+		<script th:src="@{/js/convert.js}"></script>
+	</body>
+</html>
